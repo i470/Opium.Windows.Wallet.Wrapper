@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3065753E-80FE-4ECB-A560-1C2AEF1B4159}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Wallet</RootNamespace>
-    <AssemblyName>Wallet</AssemblyName>
+    <RootNamespace>Opium.Wallet</RootNamespace>
+    <AssemblyName>Opium.Wallet</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -87,6 +87,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\AddressBookEntry.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Opium.MVVM.Framework\Opium.MVVM.Framework\Opium.MVVM.Framework.csproj">
+      <Project>{7E04524F-2FEA-4547-9EC2-C3231EB1A256}</Project>
+      <Name>Opium.MVVM.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

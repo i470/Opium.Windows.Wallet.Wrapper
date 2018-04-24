@@ -7,13 +7,13 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Wallet")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Opium Bitcoind Wallet")]
+[assembly: AssemblyDescription("WPF Wallet for bitcoin type coin")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Wallet")]
+[assembly: AssemblyCompany("R0otChixor")]
+[assembly: AssemblyProduct("Opium Wallet - Bitcoin Private")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Binary Omen")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
