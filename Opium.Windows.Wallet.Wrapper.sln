@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opium.Windows.Wallet.Wrapper", "Opium.Windows.Wallet.Wrapper\Opium.Windows.Wallet.Wrapper.csproj", "{DEB6209F-D98F-4AFB-91E2-CEFFAEE86CCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallet", "Wallet\Wallet.csproj", "{3065753E-80FE-4ECB-A560-1C2AEF1B4159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrapper", "Wrapper\Wrapper.csproj", "{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "daemon", "daemon", "{DBE98F74-84D4-4A52-AD5F-FC524105DD74}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\btcp-cli.exe = ..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\btcp-cli.exe
+		..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\btcpd.exe = ..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\btcpd.exe
+		..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\clean_blockchain.bat = ..\..\..\Downloads\BitcoinPrivateDesktopWallet_1.0.4_windows\clean_blockchain.bat
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +20,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DEB6209F-D98F-4AFB-91E2-CEFFAEE86CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEB6209F-D98F-4AFB-91E2-CEFFAEE86CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEB6209F-D98F-4AFB-91E2-CEFFAEE86CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEB6209F-D98F-4AFB-91E2-CEFFAEE86CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3065753E-80FE-4ECB-A560-1C2AEF1B4159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3065753E-80FE-4ECB-A560-1C2AEF1B4159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3065753E-80FE-4ECB-A560-1C2AEF1B4159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3065753E-80FE-4ECB-A560-1C2AEF1B4159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
