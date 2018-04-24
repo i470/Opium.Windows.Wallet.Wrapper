@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Windows.Documents;
 using Opium.MVVM.Framework.Command;
 using Opium.MVVM.Framework.ViewModel;
 using Wallet.Model;
@@ -40,30 +39,36 @@ namespace Opium.Wallet.ViewModel
 
         }
 
+#region Methods
+
         private void addNewContact(AddressBookEntry address)
         {
             throw new NotImplementedException();
+            SaveAddressBook();
         }
-
         private void copyAddress(AddressBookEntry address)
         {
             throw new NotImplementedException();
         }
-        
         private void deleteContact(AddressBookEntry address)
         {
             throw new NotImplementedException();
         }
-
         private void sendCash(AddressBookEntry address)
         {
             throw new NotImplementedException();
         }
-
         public void LoadAddressBook()
         {
             //todo add service to load address
         }
+        private void SaveAddressBook()
+        {
+            throw new NotImplementedException();
+        }
+
+#endregion
+
     }
 
     
