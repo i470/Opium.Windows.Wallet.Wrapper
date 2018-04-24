@@ -45,35 +45,60 @@ namespace Wrapper
             return bytes.ToString();
         }
 
-        public static void renameFileForMultiVersionBackup(string dir, string file)
+        public static void RenameFileForMultiVersionBackup(string dir, string file)
         {
             var versionCount = 9;
+        }
 
-            // Delete last one if it exists
-            File last = new File(dir, file + "." + versionCount);
+        public static bool IsZAddress(string address)
+        {
+            return address != null && address.StartsWith("zk") && address.Length > 40;
+        }
 
-            if (last.exists())
+        public static Tuple<bool, Exception> DeleteAllFiles(string path)
+        {
+            var isDeleteSuccess = true;
+            Exception ex = null;
+
+            try
             {
-                last.delete();
-            }
+                var di = new DirectoryInfo(path);
 
-            // Iterate and rename
-            for (int i = versionCount - 1; i >= 1; i--)
-            {
-                File f = new File(dir, file + "." + i);
-                int newIndex = i + 1;
-                if (f.exists())
+                foreach (var file in di.GetFiles())
                 {
-                    f.renameTo(new File(dir, file + "." + newIndex));
+                    file.Delete();
                 }
+                foreach (var dir in di.GetDirectories())
+                {
+                    dir.Delete(true);
+                }
+
+             
+            }
+            catch (Exception e)
+            {
+                ex = e;
+                isDeleteSuccess = false;
             }
 
-            // Rename last one
-            File orig = new File(dir, file);
-            if (orig.exists())
+            return new Tuple<bool, Exception>(isDeleteSuccess,ex);
+        }
+
+        public static Tuple<string,Exception> GetSettingsDirectory()
+        {
+            var path = string.Empty;
+            Exception ex = null;
+            try
             {
-                orig.renameTo(new File(dir, file + ".1"));
+                path = Path.Combine(Environment.GetFolderPath(
+                    Environment.SpecialFolder.ApplicationData), Resources.BTCPrivateDesktopWalletDir);
             }
+            catch (Exception e)
+            {
+                ex = e;
+            }
+
+            return new Tuple<string, Exception>(path,ex);
         }
 
     }
