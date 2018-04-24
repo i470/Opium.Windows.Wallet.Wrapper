@@ -44,8 +44,14 @@ namespace Opium.Wallet.ViewModel
         private void addNewContact(AddressBookEntry address)
         {
             throw new NotImplementedException();
-            SaveAddressBook();
+            saveAddressBook();
         }
+
+        public void LoadAddressBook()
+        {
+            //todo add service to load address
+        }
+
         private void copyAddress(AddressBookEntry address)
         {
             throw new NotImplementedException();
@@ -58,11 +64,7 @@ namespace Opium.Wallet.ViewModel
         {
             throw new NotImplementedException();
         }
-        public void LoadAddressBook()
-        {
-            //todo add service to load address
-        }
-        private void SaveAddressBook()
+        private void saveAddressBook()
         {
             throw new NotImplementedException();
         }
