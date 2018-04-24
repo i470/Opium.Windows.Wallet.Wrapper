@@ -11,8 +11,10 @@ namespace Opium.Wallet.ViewModel
     {
         public IActionCommand SendCashCommand;
         public IActionCommand DeleteContactCommand;
-        public IActionCommand CopyAddressToClibardCommand;
-        public IActionCommand AddNewContactCommand; 
+        public IActionCommand CopyAddressToClibaordCommand;
+        public IActionCommand AddNewContactCommand;
+        public IActionCommand SendContactMessageCommand;
+        public IActionCommand PlaceBetWithaContactCommand;
 
 #region Properties
 
@@ -34,8 +36,9 @@ namespace Opium.Wallet.ViewModel
             LoadAddressBook();
             SendCashCommand=new ActionCommand<AddressBookEntry>(sendCash);
             DeleteContactCommand = new ActionCommand<AddressBookEntry>(deleteContact);
-            CopyAddressToClibardCommand = new ActionCommand<AddressBookEntry>(copyAddress);
+            CopyAddressToClibaordCommand = new ActionCommand<AddressBookEntry>(copyAddress);
             AddNewContactCommand=new ActionCommand<AddressBookEntry>(addNewContact);
+
 
         }
 
