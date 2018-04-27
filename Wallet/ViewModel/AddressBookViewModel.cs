@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using Opium.MVVM.Framework.Command;
 using Opium.MVVM.Framework.ViewModel;
-using Wallet.Model;
+using Opium.Wallet.Model;
 
 namespace Opium.Wallet.ViewModel
 {

@@ -1,6 +1,6 @@
 ﻿using Opium.MVVM.Framework.Model;
 
-namespace Wallet.Model
+namespace Opium.Wallet.Model
 {
     public class AddressBookEntry:BaseNotify
     {

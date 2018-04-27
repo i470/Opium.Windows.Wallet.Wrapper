@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Wallet
+namespace Opium.Wallet.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddressBookView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddressBookView : UserControl
     {
-        public MainWindow()
+        public AddressBookView()
         {
             InitializeComponent();
         }

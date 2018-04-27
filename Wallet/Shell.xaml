@@ -1,0 +1,62 @@
+﻿<mah:MetroWindow x:Class="Opium.Wallet.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Opium.Wallet"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Bitcoin Private Opium Wallet" Height="768" Width="1024"
+        WindowStartupLocation="CenterScreen" 
+                 GlowBrush="{DynamicResource AccentColorBrush}"
+                 mah:DialogParticipation.Register="{Binding}"
+                 ShowIconOnTitleBar="True"
+                 ShowTitleBar="True" Icon="Assets/apple-icon-57x57.png">
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+           
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                               Height="20"
+                               Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource  appbar_monitor}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                               VerticalAlignment="Center"
+                               Text="console" />
+                </StackPanel>
+            </Button>
+            <Button Content="about" />
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    <mah:MetroWindow.Resources>
+        <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type mah:HamburgerMenuGlyphItem}">
+            <Grid Height="48">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe MDL2 Assets"
+                           Foreground="White"
+                           Text="{Binding Glyph}" />
+                <TextBlock Grid.Column="1"
+                           VerticalAlignment="Center"
+                           FontSize="12"
+                           Foreground="White"
+                           Text="{Binding Label}" />
+            </Grid>
+        </DataTemplate>
+        
+    </mah:MetroWindow.Resources>
+    <Grid>
+        <local:HamburgerMenuControlControl/>
+    </Grid>
+</mah:MetroWindow>
+

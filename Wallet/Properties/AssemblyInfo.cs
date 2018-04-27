@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Opium Bitcoind Wallet")]
+[assembly: AssemblyTitle("OpiumBootStrapper Bitcoind Wallet")]
 [assembly: AssemblyDescription("WPF Wallet for bitcoin type coin")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("R0otChixor")]
-[assembly: AssemblyProduct("Opium Wallet - Bitcoin Private")]
+[assembly: AssemblyProduct("OpiumBootStrapper Wallet - Bitcoin Private")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("Binary Omen")]
 [assembly: AssemblyCulture("")]
