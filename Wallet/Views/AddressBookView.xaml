@@ -5,8 +5,27 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Opium.Wallet.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="68*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="0,0,0,501.672">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="137*"/>
+                <ColumnDefinition Width="156*"/>
+                <ColumnDefinition Width="107*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtContactLabel" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtContactLabel_Copy" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1"/>
+            <StackPanel Grid.Column="2"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Copy" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Send BTCP" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            </StackPanel>
+        </Grid>
+        <Button Content="Add New Contact" HorizontalAlignment="Right" VerticalAlignment="Center" Width="128.333" Margin="0,0,20,0"/>
+
     </Grid>
 </UserControl>

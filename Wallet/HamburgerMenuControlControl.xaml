@@ -188,7 +188,7 @@
                        
                         <mah:HamburgerMenuIconItem Icon="{iconPacks:Octicons Kind=Home}" Label="Dashboard">
                             <mah:HamburgerMenuIconItem.Tag>
-                                <views:HomeView />
+                                <views:HomeView DataContext="{}" />
                             </mah:HamburgerMenuIconItem.Tag>
                         </mah:HamburgerMenuIconItem>
                         <mah:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=emoticonpoop}" Label="Send">
@@ -237,7 +237,7 @@
                         </mah:HamburgerMenuIconItem>
                         <mah:HamburgerMenuIconItem Icon="{iconPacks:Material Kind=HelpBox}" Label="Help">
                             <mah:HamburgerMenuIconItem.Tag>
-                                <views:AddressBookView />
+                                <views:HelpView />
                             </mah:HamburgerMenuIconItem.Tag>
                         </mah:HamburgerMenuIconItem>
                     </mah:HamburgerMenuItemCollection>

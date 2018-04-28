@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Opium.Windows.UserControl.Library">
+    <ControlTemplate x:Key="Opium.Button.Icon" TargetType="{x:Type Button}">
+        <Grid Height="59.946">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Margin="0"/>
+        </Grid>
+    </ControlTemplate>
+
+</ResourceDictionary>
