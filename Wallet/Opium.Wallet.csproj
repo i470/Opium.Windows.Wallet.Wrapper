@@ -130,7 +130,14 @@
     <Compile Include="HamburgerMenuControlControl.xaml.cs">
       <DependentUpon>HamburgerMenuControlControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\DaemonInfo.cs" />
+    <Compile Include="Model\NetworkAndBlockchainInfo.cs" />
+    <Compile Include="Model\ShielCoinbaseResponse.cs" />
+    <Compile Include="Model\WalletBalance.cs" />
     <Compile Include="OpiumBootStrapper.cs" />
+    <Compile Include="Services\CommandExecutor.cs" />
+    <Compile Include="Services\Command.cs" />
+    <Compile Include="Services\DaemonService.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -186,6 +193,10 @@
       <Project>{7E04524F-2FEA-4547-9EC2-C3231EB1A256}</Project>
       <Name>Opium.MVVM.Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Wrapper\Opium.Crypto.Wrapper.csproj">
+      <Project>{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}</Project>
+      <Name>Opium.Crypto.Wrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -194,9 +205,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="HamburgerMenuControlControl.xaml">
       <SubType>Designer</SubType>

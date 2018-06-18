@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Wrapper</RootNamespace>
-    <AssemblyName>Wrapper</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Opium.Crypto.Wrapper</RootNamespace>
+    <AssemblyName>Opium.Wrapper</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,17 +31,37 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CryptoFinder\CryptoFinder.cs" />
+    <Compile Include="Encoders\ASCIIEncoder.cs" />
+    <Compile Include="Encoders\Encoder.cs" />
+    <Compile Include="Encoders\Hash.cs" />
+    <Compile Include="Encoders\HexEncoder.cs" />
+    <Compile Include="Encoders\UnixTime.cs" />
+    <Compile Include="GlobalConstants.cs" />
+    <Compile Include="Model\Block.cs" />
+    <Compile Include="Model\Command.cs" />
+    <Compile Include="Model\ScriptPubKey.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Vin.cs" />
+    <Compile Include="Model\WalletTransaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rpc\IRpcConnector.cs" />
+    <Compile Include="Rpc\RpcConnector.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="Model\Vout.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">
@@ -51,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Process\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

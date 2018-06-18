@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "daemon", "daemon", "{DBE98F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opium.MVVM.Framework", "..\Opium.MVVM.Framework\Opium.MVVM.Framework\Opium.MVVM.Framework.csproj", "{7E04524F-2FEA-4547-9EC2-C3231EB1A256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opium.Bitcoin.Wrapper", "Wrapper\Opium.Bitcoin.Wrapper.csproj", "{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opium.Crypto.Wrapper", "Wrapper\Opium.Crypto.Wrapper.csproj", "{25F226D7-025B-4F4D-AE0E-E82A71F8F57D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

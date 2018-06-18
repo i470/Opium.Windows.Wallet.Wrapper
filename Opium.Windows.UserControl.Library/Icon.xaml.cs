@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace Opium.Windows.UserControl.Library
 {
-        public class Icon : Control
+        public class Icon :Control
         {
 
             public enum IconType
